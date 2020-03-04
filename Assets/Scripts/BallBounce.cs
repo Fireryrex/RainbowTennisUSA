@@ -42,4 +42,9 @@ public class BallBounce : MonoBehaviour
     {
         rb.AddForce(direction.normalized*force, ForceMode.Impulse);
     }
+
+    public void SetPosition(Vector3 position)
+    {
+        transform.position = position;
+    }
 }
