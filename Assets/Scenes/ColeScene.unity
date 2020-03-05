@@ -977,9 +977,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracks:
-  - {fileID: 8300000, guid: b2695573f934aa348b814706c2a033e2, type: 3}
-  - {fileID: 8300000, guid: 16ab85a0adfe65145ae6d8b9a2aaa504, type: 3}
-  - {fileID: 8300000, guid: b2b9a038eca1d5b46ae1ada331ce56e6, type: 3}
+  - {fileID: 8300000, guid: 2d22bf4ea571d594c8ba9a861f6701c7, type: 3}
+  - {fileID: 8300000, guid: 3eeae7a9726fe4c4d8e1826b2236c462, type: 3}
+  - {fileID: 8300000, guid: 89509d8aee5b658409236e10a9f772a4, type: 3}
+  - {fileID: 8300000, guid: 4a92583d493a14c4f9d97a008efe6c5d, type: 3}
+  - {fileID: 8300000, guid: 2d13bc5654ba16944ab8a3c53bd50f34, type: 3}
+  - {fileID: 8300000, guid: cbfa7227758556a40af738fec738ac17, type: 3}
   audioSource: {fileID: 153022579}
 --- !u!82 &153022579
 AudioSource:
