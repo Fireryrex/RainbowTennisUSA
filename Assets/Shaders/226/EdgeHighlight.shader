@@ -50,7 +50,7 @@
                 //alt abs(x-.5) in the range of .4 to .5 which translates to 
                 // abs(x-.5) -.4 >= .1
                 //and to combine the terms with an max them
-                float4 col = _Color * max(step(.05, abs(i.uv.x - .5) - .4), step(.05, abs(i.uv.y - .5) - .4));
+                float4 col = _Color * max(step(.03, abs(i.uv.x - .5) - .4), step(.03, abs(i.uv.y - .5) - .4));
                 return col;
             }
             ENDCG

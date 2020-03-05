@@ -299,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &59806382
 Transform:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &97768723
 Transform:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &127404292
 Transform:
   m_ObjectHideFlags: 0
@@ -891,6 +891,7 @@ GameObject:
   - component: {fileID: 153022575}
   - component: {fileID: 153022578}
   - component: {fileID: 153022579}
+  - component: {fileID: 153022580}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -915,8 +916,8 @@ Camera:
   m_GameObject: {fileID: 153022574}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -932,8 +933,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1076,6 +1077,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &153022580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153022574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf690932884f09849ad55965e8307f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  residual: {fileID: 4800000, guid: ee1306786349cf343872af0fc477c010, type: 3}
+  additive: {fileID: 4800000, guid: 2f76c8020a5248b42bcdb15c751e2381, type: 3}
+  blurShader: {fileID: 4800000, guid: d01d1f2058f0c4e4093da01df6a2df23, type: 3}
+  threshhold: 1
+  intensity: 1
+  downscale: 0
+  iterations: 5
+  sigma: 2
+  blurSize: 1
+  blurSamples: 17
+  Result: {fileID: 0}
+  Light: {fileID: 0}
 --- !u!1 &162251803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,7 +2591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &432093297
 Transform:
   m_ObjectHideFlags: 0
@@ -2976,7 +3001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &579601177
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3345,7 +3370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &645471322
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,7 +4715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &965531934
 Transform:
   m_ObjectHideFlags: 0
@@ -5414,7 +5439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1098118046
 Transform:
   m_ObjectHideFlags: 0
@@ -8866,7 +8891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1825180758
 Transform:
   m_ObjectHideFlags: 0
@@ -10140,7 +10165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &2080117054
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10234,7 +10259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2085587706
 Transform:
   m_ObjectHideFlags: 0
