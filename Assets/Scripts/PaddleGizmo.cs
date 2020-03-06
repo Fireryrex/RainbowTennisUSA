@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaddleGizmo : MonoBehaviour
 {
+    [Header("Visual Only")]
     public float size = 2f;
     public Color color = Color.red;
     void OnDrawGizmos()
