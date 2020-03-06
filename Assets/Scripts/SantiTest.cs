@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class SantiTest : MonoBehaviour
+
+public class SantiTest : NetworkBehaviour
 {
 
 	public float speed = 10.0f;
-	public static bool player1 = true;
+	//public static bool player1 = true;
 	void Start()
-	{
+	{	/*
 		if(player1)
 		{
 			transform.position = new Vector3(-220, 158, 0);
@@ -16,15 +18,19 @@ public class SantiTest : MonoBehaviour
 		}
 		else
 			transform.position = new Vector3(220, 158, 0);
-		
+		*/
 
 	}
 
 	void Update()
 	{
+
 		// Get the horizontal and vertical axis.
 		// By default they are mapped to the arrow keys.
 		// The value is in the range -1 to 1
+		if(!isLocalPlayer)
+			return;
+
 		float translation = Input.GetAxis("Vertical") * speed;
 		float t = Input.GetAxis("Horizontal") * speed;
 
