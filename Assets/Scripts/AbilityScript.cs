@@ -7,6 +7,7 @@ public class AbilityScript : MonoBehaviour
     private string currentAbility;
     [SerializeField] string[] abilityList;
     [SerializeField] PaddleScript paddle;
+    [SerializeField] BallBounce[] balls;
     private bool abilityActive = false;
     private float abilityDuration;
 
@@ -14,9 +15,9 @@ public class AbilityScript : MonoBehaviour
     [SerializeField] float widenSize;
 
     //Catch Variables
-    [SerializeField] float storedBallSpeed;
-    [SerializeField] Vector3 storedBallDirection;
-    [SerializeField] Transform storedBallTransform;
+    [SerializeField] float[] storedBallSpeed;
+    [SerializeField] Vector3[] storedBallDirection;
+    [SerializeField] Transform[] storedBallTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +89,11 @@ public class AbilityScript : MonoBehaviour
 
     private void releaseBall()
     {
-
+        for(int i = 0; i < balls.Length; i++)
+        {
+            balls[i].SetSpeed(storedBallSpeed[i]);
+            balls[i].SetDirection(storedBallDirection[i]);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -97,7 +102,11 @@ public class AbilityScript : MonoBehaviour
         {
             if(abilityActive && currentAbility == abilityList[2])
             {
-
+                for(int i = 0; i < balls.Length; i++)
+                {
+                    storedBallSpeed[i] = balls[i].GetSpeed();
+                    storedBallDirection[i] = balls[i].GetDirection();
+                }
             }
         }
     }
