@@ -6,7 +6,7 @@ public class SantiTest : MonoBehaviour
 {
 
 	public float speed = 10.0f;
-	private bool player1 = true;
+	public static bool player1 = true;
 	void Start()
 	{
 		if(player1)
