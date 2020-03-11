@@ -13,7 +13,7 @@ public class BallBounce : MonoBehaviour
     {
         if(Input.GetKeyDown("space"))
         {
-            SetBoth(new Vector3(1f,1f,0f), 10f);
+            SetBoth(new Vector3(1f,0f,0f), 10f);
         }
     }
     public float GetSpeed() //returns speed of ball

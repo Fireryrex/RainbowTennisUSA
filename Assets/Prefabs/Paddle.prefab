@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3310052899907193822}
   m_Layer: 0
   m_Name: Physics (Do not move)
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1be63ea155c4e542badf20b2d1c12ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 0
+  iControl: 0
+  mouseControl: 0
   speed: 0.1
   verticalRange: 3.5
 --- !u!1 &3310052900477070996
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 3310052900477070999}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

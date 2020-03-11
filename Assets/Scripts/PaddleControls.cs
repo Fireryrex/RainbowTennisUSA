@@ -6,10 +6,12 @@ public class PaddleControls : MonoBehaviour
 {
     public bool iControl = false;
     public bool mouseControl = false;
+    public bool mouseMovement = false;
     public float speed = 10f;
     public float verticalRange = 2f;
     Rigidbody rb;
     float targetPos;
+    Vector3 targetWorldPos;
     float maxHeight;
     float minHeight;
     void Start()
@@ -22,11 +24,16 @@ public class PaddleControls : MonoBehaviour
     {
         if(mouseControl)
         {
-            targetPos = GetMouseWorldPos(0f).y;
+            targetWorldPos = transform.position;
+            targetWorldPos.y = GetMouseWorldPos(0f).y;
+            if(mouseMovement)
+            {
+                targetWorldPos = GetInputControl("Mouse Y");
+            }
         }
         else
         {
-            targetPos = GetInputControl();
+            targetWorldPos = GetInputControl("Vertical");
         }
     }
     void FixedUpdate()
@@ -34,15 +41,9 @@ public class PaddleControls : MonoBehaviour
         if(iControl)
         {
             Vector3 currentPos = transform.position;
-            if(currentPos.y < targetPos - speed*1.01f & currentPos.y < maxHeight)
+            if((currentPos.y < targetWorldPos.y & currentPos.y < maxHeight) || (currentPos.y > targetWorldPos.y & currentPos.y > minHeight))
             {
-                currentPos.y += speed;// * Time.fixedDeltaTime;
-                rb.position = currentPos;
-            }
-            else if(currentPos.y > targetPos + speed*1.01f & currentPos.y > minHeight)
-            {
-                currentPos.y -= speed;// * Time.fixedDeltaTime;
-                rb.position = currentPos;
+                transform.position = Vector3.MoveTowards(transform.position, targetWorldPos, speed * Time.fixedDeltaTime);
             }
         }
     }
@@ -55,17 +56,10 @@ public class PaddleControls : MonoBehaviour
         return ray.GetPoint(distance);
     }
 
-    float GetInputControl()
+    Vector3 GetInputControl(string name)
     {
-        float yPos = transform.position.y;
-        if(Input.GetAxisRaw("Vertical") > 0)
-        {
-            yPos += speed*1.02f;
-        }
-        else if(Input.GetAxisRaw("Vertical") < 0)
-        {
-            yPos -= speed*1.02f;
-        }
+        Vector3 yPos = transform.position;
+        yPos.y += Input.GetAxisRaw(name);
         return yPos;
     }
 }
