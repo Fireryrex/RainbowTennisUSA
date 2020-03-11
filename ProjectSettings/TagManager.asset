@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Block
   - Wall
+  - PowerUpSpawn
   layers:
   - Default
   - TransparentFX
