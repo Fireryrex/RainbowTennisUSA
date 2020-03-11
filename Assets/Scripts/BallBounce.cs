@@ -5,15 +5,19 @@ using UnityEngine;
 public class BallBounce : MonoBehaviour
 {
     private Rigidbody rb;
+    [SerializeField] private bool test = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if(test)
         {
-            SetBoth(new Vector3(1f,0f,0f), 10f);
+            if(Input.GetKeyDown("space"))
+            {
+                SetBoth(new Vector3(1f,1f,0f), 10f);
+            }
         }
     }
     public float GetSpeed() //returns speed of ball
