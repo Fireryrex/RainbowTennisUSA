@@ -862,12 +862,22 @@ PrefabInstance:
     - target: {fileID: 6529968063690968487, guid: 8e011a7cae0b2134695486368c923be0,
         type: 3}
       propertyPath: speedUp
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6529968063690968487, guid: 8e011a7cae0b2134695486368c923be0,
         type: 3}
       propertyPath: speedDown
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529968063690968487, guid: 8e011a7cae0b2134695486368c923be0,
+        type: 3}
+      propertyPath: minSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529968063690968487, guid: 8e011a7cae0b2134695486368c923be0,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e011a7cae0b2134695486368c923be0, type: 3}
