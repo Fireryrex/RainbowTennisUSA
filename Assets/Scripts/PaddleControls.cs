@@ -9,23 +9,27 @@ public class PaddleControls : MonoBehaviour
     public bool mouseMovement = false;
     public float speed = 10f;
     public float verticalRange = 2f;
+    [SerializeField] float zDepth = 0f;
     Rigidbody rb;
     float targetPos;
     Vector3 targetWorldPos;
     float maxHeight;
     float minHeight;
+    Vector3 startPos;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         maxHeight = transform.position.y + verticalRange;
         minHeight = transform.position.y - verticalRange;
+        startPos = transform.position;
     }
     void Update()
     {
+        transform.position = new Vector3(startPos.x,transform.position.y,startPos.z);
         if(mouseControl)
         {
             targetWorldPos = transform.position;
-            targetWorldPos.y = GetMouseWorldPos(0f).y;
+            targetWorldPos.y = GetMouseWorldPos(zDepth).y;
             if(mouseMovement)
             {
                 targetWorldPos = GetInputControl("Mouse Y");
@@ -43,6 +47,14 @@ public class PaddleControls : MonoBehaviour
             Vector3 currentPos = transform.position;
             if((currentPos.y < targetWorldPos.y & currentPos.y < maxHeight) || (currentPos.y > targetWorldPos.y & currentPos.y > minHeight))
             {
+                if(targetWorldPos.y > maxHeight)
+                {
+                    targetWorldPos.y = maxHeight;
+                }
+                else if(targetWorldPos.y < minHeight)
+                {
+                    targetWorldPos.y = minHeight;
+                }
                 transform.position = Vector3.MoveTowards(transform.position, targetWorldPos, speed * Time.fixedDeltaTime);
             }
         }
