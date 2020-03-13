@@ -20,7 +20,7 @@ public class RainbowBlock : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         //make sure the collission actually happens with a ball then destroy this block
-        if (other.gameObject.tag == "ball")
+        if (other.gameObject.tag == "Ball")
         {
             print("boing!");
 
