@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PaddleControls : MonoBehaviour
+public class PaddleControls : NetworkBehaviour
 {
     public bool iControl = false;
     public bool mouseControl = false;
@@ -25,6 +26,9 @@ public class PaddleControls : MonoBehaviour
     }
     void Update()
     {
+		if (!base.isLocalPlayer)
+			return;
+
         transform.position = new Vector3(startPos.x,transform.position.y,startPos.z);
         if(mouseControl)
         {
