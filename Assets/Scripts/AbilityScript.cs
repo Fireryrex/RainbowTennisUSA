@@ -18,6 +18,7 @@ public class AbilityScript : MonoBehaviour
     [SerializeField] float[] storedBallSpeed;
     [SerializeField] Vector3[] storedBallDirection;
     [SerializeField] Transform[] storedBallTransform;
+    [SerializeField] string playerName;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +101,7 @@ public class AbilityScript : MonoBehaviour
     {
         if(other.CompareTag("Ball"))
         {
+            other.GetComponent<BallBounce>().SetLastPlayerHit(playerName);
             if(abilityActive && currentAbility == abilityList[2])
             {
                 for(int i = 0; i < balls.Length; i++)

@@ -28,7 +28,7 @@ public class BallSpeed : MonoBehaviour
             }
             
         }
-        else
+        else if(other.transform.tag == "Block")
         {
             if(bb.GetSpeed() > minSpeed)
             {

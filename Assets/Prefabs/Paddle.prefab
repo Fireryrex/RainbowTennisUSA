@@ -125,8 +125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iControl: 0
   mouseControl: 0
+  mouseMovement: 0
   speed: 0.1
   verticalRange: 3.5
+  zDepth: 0
 --- !u!1 &3310052900477070996
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3310052900477070998}
   - component: {fileID: 3310052900477070999}
+  - component: {fileID: 5764916351205685776}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Paddle
@@ -173,3 +176,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 3.5
   color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &5764916351205685776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310052900477070996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 

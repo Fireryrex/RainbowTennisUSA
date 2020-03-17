@@ -10,12 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4146550447323101587}
   - component: {fileID: 4146550447323101586}
-  - component: {fileID: 7315885496460024837}
-  - component: {fileID: 2551154977760873725}
-  - component: {fileID: 6804271554551373490}
-  - component: {fileID: 5102050991543688724}
   m_Layer: 0
-  m_Name: Paddle 1
+  m_Name: Backup Paddle
   m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,80 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 19.5
   color: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &7315885496460024837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146550447323101585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
---- !u!114 &2551154977760873725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146550447323101585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 0
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
-  compressRotation: 1
---- !u!114 &6804271554551373490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146550447323101585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1be63ea155c4e542badf20b2d1c12ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  iControl: 1
-  mouseControl: 1
-  mouseMovement: 0
-  speed: 40
-  verticalRange: 20
-  zDepth: 0
---- !u!114 &5102050991543688724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146550447323101585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 0
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
-  compressRotation: 1
-  target: {fileID: 4146550447323101587}
 --- !u!1 &4146550448968015069
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +59,7 @@ GameObject:
   - component: {fileID: 4146550448968015064}
   - component: {fileID: 4146550448968015071}
   - component: {fileID: 4146550448968015070}
+  - component: {fileID: 6960451026347814046}
   m_Layer: 0
   m_Name: Physics (Do not move)
   m_TagString: Paddle
@@ -234,3 +157,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 3
+--- !u!114 &6960451026347814046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146550448968015069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06c4e8704ec25948901da9a83833129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iControl: 1
+  mouseControl: 0
+  mouseMovement: 0
+  speed: 40
+  verticalRange: 20
+  zDepth: 0
