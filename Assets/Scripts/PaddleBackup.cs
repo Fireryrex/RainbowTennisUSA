@@ -65,7 +65,7 @@ public class PaddleBackup : MonoBehaviour
     Vector3 GetInputControl(string name)
     {
         Vector3 yPos = transform.position;
-        yPos.y += Input.GetAxisRaw(name);
+        yPos.y += Input.GetAxisRaw(name) * speed;
         return yPos;
     }
 }
