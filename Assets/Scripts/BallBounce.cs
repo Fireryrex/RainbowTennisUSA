@@ -17,7 +17,7 @@ public class BallBounce : MonoBehaviour
         {
             if(Input.GetKeyDown("space"))
             {
-                SetBoth(new Vector3(1f,1f,0f), 30f);
+                SetBoth(new Vector3(1f,0.1f,0f), 50f);
             }
         }
     }

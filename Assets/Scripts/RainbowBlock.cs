@@ -17,12 +17,11 @@ public class RainbowBlock : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionExit(Collision other)
     {
         //make sure the collission actually happens with a ball then destroy this block
         if (other.gameObject.tag == "Ball")
         {
-            print("boing!");
 
             //do soemthing here to reverse the velocity of the pong fall
             Destroy(this.gameObject);
