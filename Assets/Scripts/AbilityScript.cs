@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AbilityScript : MonoBehaviour
 {
-    private string currentAbility;
+    [SerializeField] string currentAbility;
     [SerializeField] string[] abilityList;
-    [SerializeField] PaddleScript paddle;
+    [SerializeField] PaddleBackup paddle;
     [SerializeField] BallBounce[] balls;
     private bool abilityActive = false;
     private float abilityDuration;
@@ -23,7 +23,7 @@ public class AbilityScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        paddle = this.GetComponent<PaddleBackup>();   
     }
 
     // Update is called once per frame
@@ -97,11 +97,11 @@ public class AbilityScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if(other.CompareTag("Ball"))
+        if(other.gameObject.CompareTag("Ball"))
         {
-            other.GetComponent<BallBounce>().SetLastPlayerHit(playerName);
+            other.gameObject.GetComponent<BallBounce>().SetLastPlayerHit(playerName);
             if(abilityActive && currentAbility == abilityList[2])
             {
                 for(int i = 0; i < balls.Length; i++)

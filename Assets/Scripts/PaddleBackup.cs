@@ -68,4 +68,9 @@ public class PaddleBackup : MonoBehaviour
         yPos.y += Input.GetAxisRaw(name) * speed;
         return yPos;
     }
+
+    public void widen(float widenSize)
+    {
+
+    }
 }

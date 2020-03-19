@@ -6,7 +6,7 @@ public class BallBounce : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] private bool test = false;
-    private string lastPlayer;
+    [SerializeField] string lastPlayer;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -69,4 +69,5 @@ public class BallBounce : MonoBehaviour
     {
         return lastPlayer;
     }
+
 }
