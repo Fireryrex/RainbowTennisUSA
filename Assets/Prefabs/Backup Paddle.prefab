@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player2: 0
-  speed: 200
+  speed: 60
   verticalRange: 20
   zDepth: 0
