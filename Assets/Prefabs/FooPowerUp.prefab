@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5340550845032727436}
   - component: {fileID: 6434018182888105438}
   - component: {fileID: 7807647601306874564}
+  - component: {fileID: 2767599984792516242}
   m_Layer: 0
   m_Name: FooPowerUp
   m_TagString: Untagged
@@ -91,5 +92,23 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.0079963
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2767599984792516242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767263826213967475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fc426dd45cc2442849295fff40beac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities:
+  - wideload
+  - catch
+  abilityRail: {fileID: 0}
+  player: 
+  ability: 
