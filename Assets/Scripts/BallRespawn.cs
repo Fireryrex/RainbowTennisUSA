@@ -12,6 +12,15 @@ public class BallRespawn : MonoBehaviour
     float time = 0;
     [SerializeField] int timeToWait = 10;
     bool countdown;
+    [SerializeField] AudioClip noise;
+    [SerializeField] GameObject ball;
+    [SerializeField] AudioSource src;
+    void Start()
+    {
+        if (ball.GetComponent<AudioSource>() != null)
+            src = ball.GetComponent<AudioSource>();
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,6 +41,8 @@ public class BallRespawn : MonoBehaviour
             {
                 time = Time.time;
                 timeToWait--;
+                if(timeToWait <= 5)
+                    src.PlayOneShot(noise);
             }
             if(timeToWait <= 5)
             {
